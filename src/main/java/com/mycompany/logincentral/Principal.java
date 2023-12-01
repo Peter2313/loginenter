@@ -280,6 +280,7 @@ public class Principal extends javax.swing.JFrame {
     // TODO add your handling code here:
     if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
       acceder.requestFocus();
+      acceder.setEnabled(false);
     }
   }//GEN-LAST:event_contraseñatfKeyPressed
 
