@@ -5,6 +5,7 @@
 package com.mycompany.logincentral;
 
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -69,6 +70,11 @@ public class Principal extends javax.swing.JFrame {
         nombreloginActionPerformed(evt);
       }
     });
+    nombrelogin.addKeyListener(new java.awt.event.KeyAdapter() {
+      public void keyPressed(java.awt.event.KeyEvent evt) {
+        nombreloginKeyPressed(evt);
+      }
+    });
     jPanel2.add(nombrelogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 140, 20));
 
     jLabel3.setText("Contraseña");
@@ -85,6 +91,11 @@ public class Principal extends javax.swing.JFrame {
       }
       public void mousePressed(java.awt.event.MouseEvent evt) {
         contraseñatfMousePressed(evt);
+      }
+    });
+    contraseñatf.addKeyListener(new java.awt.event.KeyAdapter() {
+      public void keyPressed(java.awt.event.KeyEvent evt) {
+        contraseñatfKeyPressed(evt);
       }
     });
     jPanel2.add(contraseñatf, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 140, 20));
@@ -257,6 +268,20 @@ public class Principal extends javax.swing.JFrame {
   private void nombreloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreloginActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_nombreloginActionPerformed
+
+  private void nombreloginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombreloginKeyPressed
+    // TODO add your handling code here:
+    if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+      contraseñatf.requestFocus();
+    }
+  }//GEN-LAST:event_nombreloginKeyPressed
+
+  private void contraseñatfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_contraseñatfKeyPressed
+    // TODO add your handling code here:
+    if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+      acceder.requestFocus();
+    }
+  }//GEN-LAST:event_contraseñatfKeyPressed
 
   /**
    * @param args the command line arguments
